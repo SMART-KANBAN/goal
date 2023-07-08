@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbProgressbarModule } from '@ng-bootstrap/ng-bootstrap';
 import { MaterialModule } from '../shared/material/material.module';
-import { PipesModule } from '../shared/pipes/pipes.module';
 import { CaptureGoalsComponent } from './modals/capture-goals/capture-goals.component';
 import { GoalManagementComponent } from './goal-management.component';
 import { CreateGoalTaskComponent } from './modals/create-goal-task/create-goal-task.component';
@@ -17,28 +16,30 @@ import { ContentComponent } from './widgets/circular-number/content/content.comp
 import { TasksComponent } from './widgets/tasks/tasks.component';
 import { CommentComponent } from './modals/comment/comment.component';
 import { AddExtraGoalTimeComponent } from './modals/add-extra-goal-time/add-extra-goal-time.component';
+import { PipesModule } from "../shared/pipes/pipes.module";
 
 @NgModule({
-  declarations: [
-    GoalManagementComponent,
-    GoalCardComponent,
-    GoalColumnListComponent,
-    GoalColumnHeadersComponent,  
-    CreateGoalTaskComponent,
-    ViewSelectedGoalComponent,
-    CircularNumberComponent,
-    ContentComponent,
-    TasksComponent,
-    CaptureGoalsComponent,
-    CommentComponent,
-    AddExtraGoalTimeComponent
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    DragDropModule,
-    NgbProgressbarModule,
-    ReactiveFormsModule
-  ],
+    declarations: [
+        GoalManagementComponent,
+        GoalCardComponent,
+        GoalColumnListComponent,
+        GoalColumnHeadersComponent,
+        CreateGoalTaskComponent,
+        ViewSelectedGoalComponent,
+        CircularNumberComponent,
+        ContentComponent,
+        TasksComponent,
+        CaptureGoalsComponent,
+        CommentComponent,
+        AddExtraGoalTimeComponent
+    ],
+    imports: [
+        CommonModule,
+        MaterialModule,
+        DragDropModule,
+        NgbProgressbarModule,
+        ReactiveFormsModule,
+        PipesModule
+    ]
 })
 export class GoalManagementModule { }
